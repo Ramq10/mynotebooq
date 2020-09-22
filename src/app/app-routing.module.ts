@@ -12,12 +12,14 @@ import { AngularDeploymentOnTomcatComponent } from './linux-command/angular-depl
 import { AngularDeploymentOnNginxComponent } from './linux-command/angular-deployment-on-nginx/angular-deployment-on-nginx.component';
 import { SpringBootDeploymentOnTomcatComponent } from './linux-command/spring-boot-deployment-on-tomcat/spring-boot-deployment-on-tomcat.component';
 import { NotebooksComponent } from './notebooks/notebooks.component';
+import { ArrayComponent } from './data-structure/array/array.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'angular', component: AngularComponent },
   { path: 'data-structure', component: DataStructureComponent },
+  { path: 'data-structure/array', component: ArrayComponent },
   { path: 'java-core', component: JavaCoreComponent },
   { path: 'postgres', component: PostgresComponent },
   { path: 'notebooks', component: NotebooksComponent },
@@ -41,6 +43,6 @@ export const RoutingComponents = [
   JavaCoreComponent, PostgresComponent, SpringBootComponent,
   LinuxCommandComponent, BasicLinuxCommandsComponent,
   AngularDeploymentOnTomcatComponent, AngularDeploymentOnNginxComponent,
-  SpringBootDeploymentOnTomcatComponent, NotebooksComponent
+  SpringBootDeploymentOnTomcatComponent, NotebooksComponent, ArrayComponent
 
 ];
