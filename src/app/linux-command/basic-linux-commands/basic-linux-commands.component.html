@@ -6,11 +6,14 @@
             <ul>
                 <li *ngFor="let c of commands">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="cmd-key">{{c.value}} :</div>
                         </div>
                         <div class="col-md-7">
                             <div class="value">{{c.cmd}}</div>
+                        </div>
+                        <div id="terminal-icon" class="col-md-1" (click)="opencmd(c.cmd)">
+                            <div class="value"><i class='bx bx-message-detail'></i></div>
                         </div>
                     </div>
                     <hr>
@@ -24,5 +27,21 @@
                 <i style="float: right;" class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
         </div>
+    </div>
+</div>
+<div class="card terminal-card" *ngIf="showcmd" id="custom-terminal">
+    <div class="card-header">
+        <div class="header-text">bash/~cmd</div>
+    </div>
+    <div class="card-body card-body-custom">
+        <ngx-typed-js
+          [strings]="[this.runexmple]"
+          backDelay="500"
+          smartBackspace="true"
+          typeSpeed="10"
+          loop="true"
+        >
+          <h1 class="typing"></h1>
+        </ngx-typed-js>
     </div>
 </div>

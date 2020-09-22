@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-basic-linux-commands',
@@ -12,6 +12,8 @@ export class BasicLinuxCommandsComponent implements OnInit {
   commands: any[] = [];
   i = 0;
   l = 8;
+  runexmple = 'sdfsdf';
+  showcmd = false;
 
   constructor() { }
 
@@ -88,6 +90,18 @@ export class BasicLinuxCommandsComponent implements OnInit {
       this.commands = this.allCommands.slice(this.i, this.l);
     }
 
+  }
+
+  opencmd(data): void {
+    this.runexmple = '$ ' + data;
+    this.showcmd = !this.showcmd;
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  onClickedOutsideVsxi(targetElement): void {
+    if (!targetElement.closest('#custom-terminal') && !targetElement.closest('#terminal-icon') && this.showcmd) {
+      this.showcmd = !this.showcmd;
+    }
   }
 
 }
