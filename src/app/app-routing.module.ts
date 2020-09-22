@@ -11,6 +11,7 @@ import { BasicLinuxCommandsComponent } from './linux-command/basic-linux-command
 import { AngularDeploymentOnTomcatComponent } from './linux-command/angular-deployment-on-tomcat/angular-deployment-on-tomcat.component';
 import { AngularDeploymentOnNginxComponent } from './linux-command/angular-deployment-on-nginx/angular-deployment-on-nginx.component';
 import { SpringBootDeploymentOnTomcatComponent } from './linux-command/spring-boot-deployment-on-tomcat/spring-boot-deployment-on-tomcat.component';
+import { NotebooksComponent } from './notebooks/notebooks.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: '', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'data-structure', component: DataStructureComponent },
   { path: 'java-core', component: JavaCoreComponent },
   { path: 'postgres', component: PostgresComponent },
+  { path: 'notebooks', component: NotebooksComponent },
   { path: 'linux-commands', component: LinuxCommandComponent},
   { path: 'linux-commands/basic-linux-commands', component: BasicLinuxCommandsComponent},
   { path: 'linux-commands/angular-deployment-on-tomcat', component: AngularDeploymentOnTomcatComponent},
@@ -39,6 +41,6 @@ export const RoutingComponents = [
   JavaCoreComponent, PostgresComponent, SpringBootComponent,
   LinuxCommandComponent, BasicLinuxCommandsComponent,
   AngularDeploymentOnTomcatComponent, AngularDeploymentOnNginxComponent,
-  SpringBootDeploymentOnTomcatComponent
+  SpringBootDeploymentOnTomcatComponent, NotebooksComponent
 
 ];

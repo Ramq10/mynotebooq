@@ -1,1 +1,28 @@
-<p>spring-boot-deployment-on-tomcat works!</p>
+<div class="container mt-4">
+    <div class="card card-custom pt-4 pr-4 pl-4 mb-5">
+        <h3 class="card-text">{{title}}</h3>
+        <hr>
+        <div class="card-body">
+            <ul>
+                <li *ngFor="let c of commands">
+                    <div class="cmd-key">
+                        {{c.value}} :
+                    </div>
+                    <div class="value" *ngFor="let d of c.cmd">
+                        <div>
+                            {{d}}
+                        </div>
+                    </div>
+                    <hr>
+                </li>
+            </ul>
+        </div>
+        <div class="custom-card-footer">
+            <div style="float: right;" (click)="paginateData()">
+                <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
+                <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
+                <i style="float: right;" class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>

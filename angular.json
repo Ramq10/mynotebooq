@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "golmol": {
+    "mynotebooq": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/golmol",
+            "outputPath": "dist/mynotebooq",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "golmol:build"
+            "browserTarget": "mynotebooq:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "golmol:build:production"
+              "browserTarget": "mynotebooq:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "golmol:build"
+            "browserTarget": "mynotebooq:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "golmol:serve"
+            "devServerTarget": "mynotebooq:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "golmol:serve:production"
+              "devServerTarget": "mynotebooq:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "golmol"
+  "defaultProject": "mynotebooq"
 }
