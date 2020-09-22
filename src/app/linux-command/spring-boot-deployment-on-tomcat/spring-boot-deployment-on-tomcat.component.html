@@ -8,7 +8,7 @@
                     <div class="cmd-key">
                         {{c.value}} :
                     </div>
-                    <div class="value" *ngFor="let d of c.cmd">
+                    <div id="cmd-value" (click)="opencmd(c.tValue)" class="value" *ngFor="let d of c.cmd">
                         <div>
                             {{d}}
                         </div>
@@ -24,5 +24,24 @@
                 <i style="float: right;" class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- TERMINAL WINDOW -->
+<div class="card terminal-card" *ngIf="showcmd" id="custom-terminal">
+    <div class="card-header">
+        <div class="header-text">bash/~cmd</div>
+    </div>
+    <div class="card-body card-body-custom">
+        <ngx-typed-js
+          [strings]="[this.runexmple]"
+          backDelay="500"
+          smartBackspace="true"
+          typeSpeed="10"
+          backSpeed="10"
+          loop="true"
+        >
+          <h1 class="typing"></h1>
+        </ngx-typed-js>
     </div>
 </div>

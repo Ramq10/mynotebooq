@@ -12,7 +12,7 @@ export class BasicLinuxCommandsComponent implements OnInit {
   commands: any[] = [];
   i = 0;
   l = 8;
-  runexmple = 'sdfsdf';
+  runexmple = '';
   showcmd = false;
 
   constructor() { }
@@ -99,7 +99,10 @@ export class BasicLinuxCommandsComponent implements OnInit {
 
   @HostListener('document:click', ['$event.target'])
   onClickedOutsideVsxi(targetElement): void {
-    if (!targetElement.closest('#custom-terminal') && !targetElement.closest('#terminal-icon') && this.showcmd) {
+    if (!targetElement.closest('#custom-terminal') &&
+      !targetElement.closest('#terminal-icon') &&
+      !targetElement.closest('#cmd-value') &&
+      this.showcmd) {
       this.showcmd = !this.showcmd;
     }
   }

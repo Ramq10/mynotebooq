@@ -2,7 +2,7 @@
     <div class="card card-custom pt-4 pr-4 pl-4 mb-5">
         <h3 class="card-text">{{title}}</h3>
         <hr>
-        <div class="card-body">
+        <div class="card-body custom-card-body">
             <ul>
                 <li *ngFor="let c of commands">
                     <div class="row">
@@ -10,7 +10,7 @@
                             <div class="cmd-key">{{c.value}} :</div>
                         </div>
                         <div class="col-md-7">
-                            <div class="value">{{c.cmd}}</div>
+                            <div class="value" id="cmd-value" (click)="opencmd(c.cmd)">{{c.cmd}}</div>
                         </div>
                         <div id="terminal-icon" class="col-md-1" (click)="opencmd(c.cmd)">
                             <div class="value"><i class='bx bx-message-detail'></i></div>
@@ -29,6 +29,9 @@
         </div>
     </div>
 </div>
+
+
+<!-- TERMINAL WINDOW -->
 <div class="card terminal-card" *ngIf="showcmd" id="custom-terminal">
     <div class="card-header">
         <div class="header-text">bash/~cmd</div>
@@ -39,6 +42,7 @@
           backDelay="500"
           smartBackspace="true"
           typeSpeed="10"
+          backSpeed="10"
           loop="true"
         >
           <h1 class="typing"></h1>

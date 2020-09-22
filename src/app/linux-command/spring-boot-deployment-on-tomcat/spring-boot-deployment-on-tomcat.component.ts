@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-spring-boot-deployment-on-tomcat',
@@ -12,6 +12,8 @@ export class SpringBootDeploymentOnTomcatComponent implements OnInit {
   commands: any[] = [];
   i = 0;
   l = 8;
+  runexmple = '';
+  showcmd = false;
 
   constructor() { }
 
@@ -19,19 +21,23 @@ export class SpringBootDeploymentOnTomcatComponent implements OnInit {
     this.allCommands = [
       {
         cmd: ['Install maven globally and for that follow this url: https://www.javatpoint.com/how-to-install-maven'],
-        value: 'Step-1'
+        value: 'Step-1',
+        tValue: null
       },
       {
         cmd: ['After successfully installation of Maven, Run \'mvn clean install\' in project folder.', 'This will create a war file name of your project as: projectName.war'],
-        value: 'Step-2'
+        value: 'Step-2',
+        tValue: '/projectFolder/ $ mvn clean install'
       },
       {
         cmd: ['Just copy the war file in webapps folder of tomcat', 'and go to bin/ folder run this command: \'./startup.sh\''],
-        value: 'Step-3'
+        value: 'Step-3',
+        tValue: '/apache-2.3/bin/ $ ./startup.sh'
       },
       {
         cmd: ['Logs will be created in logs/catalina.out file, to get the logs go to logs/ folder and run this command: \'tail -f catalina.out\''],
-        value: 'Want to see logs?'
+        value: 'Want to see logs?',
+        tValue: '/apache-2.3/logs/ $ tail -f catalina.out'
       }
     ];
     this.commands = this.allCommands.slice(this.i, this.l);
@@ -49,5 +55,21 @@ export class SpringBootDeploymentOnTomcatComponent implements OnInit {
     }
 
   }
+
+  opencmd(data): void {
+    if (data) {
+      this.runexmple = 'server@username:' + data;
+      this.showcmd = !this.showcmd;
+    }
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  onClickedOutsideVsxi(targetElement): void {
+    if (!targetElement.closest('#cmd-value') &&
+      this.showcmd) {
+      this.showcmd = !this.showcmd;
+    }
+  }
+
 
 }
