@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { NgxTypedJsComponent, NgxTypedJsModule } from 'ngx-typed-js';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
