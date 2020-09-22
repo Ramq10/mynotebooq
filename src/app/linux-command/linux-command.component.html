@@ -1,28 +1,70 @@
-<div class="container mt-4">
-    <div class="card card-custom pt-4 pr-4 pl-4 mb-5">
-        <h3 class="card-text">{{title}}</h3>
+<section>
+    <div class="container mt-5">
+        <header>
+            <h1 class="custom-text-c">LINUX_COMMANDS</h1>
+        </header>
         <hr>
-        <div class="card-body">
-            <ul>
-                <li *ngFor="let c of commands">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="cmd-key">{{c.value}} :</div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="value">{{c.cmd}}</div>
-                        </div>
+    </div>
+</section>
+<body style="overflow: hidden;">
+    <section>
+        <div class="container pt-4">
+            <div class="row mt-5 mb-5">
+                <div class="col-md-4">
+                    <div class="card p-4 mb-3" routerLink="/linux-commands/basic-linux-commands">
+                        <h3 class="card-text">BASIC-LINUX-COMMANDS</h3>
                     </div>
-                    <hr>
-                </li>
-            </ul>
-        </div>
-        <div class="custom-card-footer">
-            <div style="float: right;" (click)="paginateData()">
+                </div>
+                <div class="col-md-4">
+                        <div class="card p-4 mb-3" routerLink="/linux-commands/angular-deployment-on-tomcat">
+                            <h3 class="card-text">ANGULAR-DEPLOYMENT-ON-TOMCAT</h3>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card p-4 mb-3" routerLink="/linux-commands/angular-deployment-on-nginx">
+                            <h3 class="card-text">ANGULAR-DEPLOYMENT-ON-NGINX</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <div class="card p-4 mb-3" routerLink="/linux-commands/spring-boot-deployment-on-tomcat">
+                        <h3 class="card-text">SPRING-BOOT-DEPLOYMENT-ON-TOMCAT</h3>
+                    </div>
+                </div>
+                    <!-- <div class="col-md-4">
+                        <div class="card p-4 bg-warning mb-3" routerLink="/spring-boot">
+                            <h3 class="card-text">SPRING-BOOT</h3>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 bg-info mb-3">
+                            <h3 class="card-text">Spring Boot</h3>
+                        </div>
+                </div> -->
+            </div>
+            <!-- <div class="row mb-5">
+                <div class="col-md-4">
+                    <div class="card p-4 bg-light mb-3">
+                        <h3 class="card-text">Spring Boot</h3>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 text-white bg-dark mb-3">
+                            <h3 class="card-text">Spring Boot</h3>
+                        </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 text-white bg-secondary mb-3">
+                            <h3 class="card-text">Spring Boot</h3>
+                    </div>
+                </div>
+            </div> -->
+            <div class="container dot pb-5">
                 <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
                 <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
-                <i style="float: right;" class="fa fa-chevron-right" aria-hidden="true"></i>
+                <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+</body>
