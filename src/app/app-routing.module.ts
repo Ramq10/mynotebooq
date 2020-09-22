@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { JavaCoreComponent } from './java-core/java-core.component';
 import { PostgresComponent } from './postgres/postgres.component';
 import { SpringBootComponent } from './spring-boot/spring-boot.component';
+import { LinuxCommandComponent } from './linux-command/linux-command.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: '', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'data-structure', component: DataStructureComponent },
   { path: 'java-core', component: JavaCoreComponent },
   { path: 'postgres', component: PostgresComponent },
+  { path: 'linux-commands', component: LinuxCommandComponent},
   { path: 'spring-boot', component: SpringBootComponent },
   { path: '**', component: HomeComponent },
 
@@ -26,5 +28,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const RoutingComponents = [
   HomeComponent, AngularComponent, DataStructureComponent,
-  JavaCoreComponent, PostgresComponent, SpringBootComponent
+  JavaCoreComponent, PostgresComponent, SpringBootComponent,
+  LinuxCommandComponent
 ];
