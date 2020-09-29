@@ -74,6 +74,22 @@ export class BasicLinuxCommandsComponent implements OnInit {
       {
         cmd: 'scp -a folderName/. severIP:port/public_folderName/',
         value: 'Copy All Files of a Folder From One Server to Another'
+      },
+      {
+        cmd: 'sudo du -shc /folderName',
+        value: 'Get Total size of a folder'
+      },
+      {
+        cmd: 'sudo du -shc /folderName/*',
+        value: 'Get Total size of each folder and subfolder'
+      },
+      {
+        cmd: 'find /folderName -type f -name "*.mp3"',
+        value: 'Find All files with same(\'.mp3\') extention in a folder.'
+      },
+      {
+        cmd: 'find -maxdepth 1 -iname \'*.mp3\' -exec cp {} /home/sk/test2/ \\',
+        value: 'Find All files with same(\'.mp3\') extention in a folder and copy to another folder.'
       }
     ];
     this.commands = this.allCommands.slice(this.i, this.l);
