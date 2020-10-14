@@ -90,6 +90,18 @@ export class BasicLinuxCommandsComponent implements OnInit {
       {
         cmd: 'find -maxdepth 1 -iname \'*.mp3\' -exec cp {} /home/sk/test2/ \\',
         value: 'Find All files with same(\'.mp3\') extention in a folder and copy to another folder.'
+      },
+      {
+        cmd: 'find /folderName/secondFolderName/ -type f | wc -l',
+        value: 'Count All Files.'
+      },
+      {
+        cmd: 'chmod -R 777 /folderName/folder/',
+        value: 'Grant all access to folder '
+      },
+      {
+        cmd: 'sudo du -shc /home/witty/upload/',
+        value: 'Total size of folder.'
       }
     ];
     this.commands = this.allCommands.slice(this.i, this.l);
