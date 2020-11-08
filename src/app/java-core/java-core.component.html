@@ -1,13 +1,36 @@
-<div class="container mt-5">
-    <div class="card pt-4 pr-4 pl-4 mb-5" [style.background-color]="getCardColor()">
-        <h3 class="card-text" [style.color]="textColor">Spring Boot</h3>
-        <div class="footer">
-            <div style="float: right;">
-                <i class="fa fa-dot-circle-o mr-5" [style.color]="textColor" aria-hidden="true"></i>
-                <i class="fa fa-dot-circle-o mr-5" [style.color]="textColor" aria-hidden="true"></i>
-                <i style="float: right; cursor: pointer;" [style.color]="textColor"
-                 (click)="getCardColor()" class="fa fa-chevron-right" aria-hidden="true"></i>
+<section>
+    <div class="container mt-4">
+        <h2 class="page-heading">JAVA-CORE</h2>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="card-custom card mt-5 p-3">
+            <div class="card-body custom-card-body">
+                <ul *ngFor="let c of commands">
+                    <li>
+                        <div class="col">
+                            <div class="cmd-key">{{c.question}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="value" id="cmd-value">{{c.answer}}</div>
+                            </div>
+                            <div id="terminal-icon" *ngIf="c.code" class="col-md-1">
+                                <div class="value"><i class='bx bx-message-detail'></i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="custom-card-footer">
+                <div style="float: right;" (click)="paginateData()">
+                    <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
+                    <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
+                    <i style="float: right;" class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
