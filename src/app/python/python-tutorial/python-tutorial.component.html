@@ -1,0 +1,36 @@
+<section>
+    <div class="container mt-4">
+        <h2 class="page-heading">PYTHON TUTORIAL</h2>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="card-custom card mt-5 p-3">
+            <div class="card-body custom-card-body">
+                <ul *ngFor="let c of commands">
+                    <li *ngIf="c.topic || c.desc">
+                        <div class="col">
+                            <div class="cmd-key">{{c.topic}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="value" id="cmd-value">{{c.desc}}</div>
+                            </div>
+                            <div id="terminal-icon" *ngIf="c.code" class="col-md-1">
+                                <div class="value"><i class='bx bx-message-detail'></i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <hr *ngIf="c.topic || c.desc">
+                </ul>
+            </div>
+            <div class="custom-card-footer">
+                <div style="float: right;" (click)="paginateData()">
+                    <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
+                    <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
+                    <i style="float: right;" class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

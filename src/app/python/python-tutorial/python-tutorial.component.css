@@ -1,0 +1,16 @@
+.page-heading {
+    color: #2905bb;
+    font-weight: 600;
+    font-family: cursive;
+}
+.cmd-key {
+    color: black;
+    font-size: x-large;
+    margin-bottom: 2%;
+    font-family: cursive;
+}
+.value {
+    font-size: larger;
+    color: #0563bb;
+    font-family: cursive;
+}

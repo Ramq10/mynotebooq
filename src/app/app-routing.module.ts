@@ -17,11 +17,21 @@ import { BasicQueryComponent } from './postgres/basic-query/basic-query.componen
 import { DbQuestionsComponent } from './postgres/db-questions/db-questions.component';
 import { DbTopicsComponent } from './postgres/db-topics/db-topics.component';
 import { ServerDbConnectionComponent } from './postgres/server-db-connection/server-db-connection.component';
+import { PythonComponent } from './python/python.component';
+import { PythonNotesComponent } from './python/python-notes/python-notes.component';
+import { PythonQuestionsComponent } from './python/python-questions/python-questions.component';
+import { PythonTutorialComponent } from './python/python-tutorial/python-tutorial.component';
+import { PythonTopicsComponent } from './python/python-topics/python-topics.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'angular', component: AngularComponent },
+  { path: 'python', component: PythonComponent },
+  { path: 'python/tutorial', component: PythonTutorialComponent },
+  { path: 'python/notes', component: PythonNotesComponent },
+  { path: 'python/questions', component: PythonQuestionsComponent },
+  { path: 'python/topics', component: PythonTopicsComponent },
   { path: 'data-structure', component: DataStructureComponent },
   { path: 'data-structure/array', component: ArrayComponent },
   { path: 'java-core', component: JavaCoreComponent },
@@ -52,6 +62,7 @@ export const RoutingComponents = [
   LinuxCommandComponent, BasicLinuxCommandsComponent,
   AngularDeploymentOnTomcatComponent, AngularDeploymentOnNginxComponent,
   SpringBootDeploymentOnTomcatComponent, NotebooksComponent, ArrayComponent,
-  BasicQueryComponent, DbQuestionsComponent, DbTopicsComponent, ServerDbConnectionComponent
+  BasicQueryComponent, DbQuestionsComponent, DbTopicsComponent, ServerDbConnectionComponent,
+  PythonComponent, PythonNotesComponent, PythonQuestionsComponent, PythonTutorialComponent, PythonTopicsComponent
 
 ];
