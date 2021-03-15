@@ -1,0 +1,9 @@
+@media (max-width: 640px) {
+    .cont {
+        position: absolute;
+        top: 18%;
+    }
+    #hero .social-links {
+        margin-top: 15px;
+    }
+  }

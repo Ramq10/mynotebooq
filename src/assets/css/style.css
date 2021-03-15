@@ -308,7 +308,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992px) {
   #hero {
     text-align: center;
-    background: url("../img/hero-bg.jpg") center right no-repeat;
+    background: url("../img/hero-bg-m.jpg") center right no-repeat;
     background-size: cover;
   }
   #hero h1 {

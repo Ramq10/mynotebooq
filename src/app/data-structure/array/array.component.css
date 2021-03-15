@@ -1,7 +1,11 @@
 .cmd-key {
     color: #0563bb;
+    font-size: x-large;
+    margin-bottom: 2%;
+    font-family: cursive;
 }
 .value {
     font-size: larger;
-    color: black;
+    color: #0563bb;
+    font-family: cursive;
 }

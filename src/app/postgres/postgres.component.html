@@ -1,26 +1,43 @@
-<!-- <div class="container mt-4">
-    <div class="card pt-4 pr-4 pl-4 mb-5" [style.background-color]="getCardColor()">
-        <h3 class="card-text" [style.color]="textColor">Spring Boot</h3>
-        <div class="footer">
-            <div style="float: right;">
-                <i class="fa fa-dot-circle-o mr-5" [style.color]="textColor" aria-hidden="true"></i>
-                <i class="fa fa-dot-circle-o mr-5" [style.color]="textColor" aria-hidden="true"></i>
-                <i style="float: right; cursor: pointer;" [style.color]="textColor"
-                 (click)="getCardColor()" class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-</div> -->
-<div class="container mt-4">
-    <div class="card card-custom pt-4 pr-4 pl-4 mb-5">
-        <h3 class="card-text">{{title}}</h3>
+<section>
+    <div class="container mt-5">
+        <header>
+            <h1 class="custom-text-c">POSTGRES_TUTORIAL</h1>
+        </header>
         <hr>
-        <div class="custom-card-footer">
-            <div style="float: right;">
+    </div>
+</section>
+<body style="overflow: hidden;">
+    <section>
+        <div class="container pt-4">
+            <div class="row mt-5 mb-5">
+                <div class="col-md-4">
+                    <div class="card p-4 mb-3" routerLink="/postgres/basic-query">
+                        <h3 class="card-text">BASIC-QUERY</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card p-4 mb-3" routerLink="/postgres/server-db-connection">
+                            <h3 class="card-text">SERVER-DB-CONNECTION</h3>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card p-4 mb-3" routerLink="/postgres/db-questions">
+                            <h3 class="card-text">DB-QUESTIONS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <div class="card p-4 mb-3" routerLink="/postgres/all-topics">
+                        <h3 class="card-text">ALL-TOPICS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container dot pb-5">
                 <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
                 <i class="fa fa-dot-circle-o mr-5" aria-hidden="true"></i>
-                <i style="float: right; cursor: pointer;" class="fa fa-chevron-right" aria-hidden="true"></i>
+                <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+</body>

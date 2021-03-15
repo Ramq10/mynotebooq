@@ -13,6 +13,10 @@ import { AngularDeploymentOnNginxComponent } from './linux-command/angular-deplo
 import { SpringBootDeploymentOnTomcatComponent } from './linux-command/spring-boot-deployment-on-tomcat/spring-boot-deployment-on-tomcat.component';
 import { NotebooksComponent } from './notebooks/notebooks.component';
 import { ArrayComponent } from './data-structure/array/array.component';
+import { BasicQueryComponent } from './postgres/basic-query/basic-query.component';
+import { DbQuestionsComponent } from './postgres/db-questions/db-questions.component';
+import { DbTopicsComponent } from './postgres/db-topics/db-topics.component';
+import { ServerDbConnectionComponent } from './postgres/server-db-connection/server-db-connection.component';
 
 const routes: Routes = [
   { path: 'home', redirectTo: '', pathMatch: 'full' },
@@ -22,6 +26,10 @@ const routes: Routes = [
   { path: 'data-structure/array', component: ArrayComponent },
   { path: 'java-core', component: JavaCoreComponent },
   { path: 'postgres', component: PostgresComponent },
+  { path: 'postgres/basic-query', component: BasicQueryComponent },
+  { path: 'postgres/db-questions', component: DbQuestionsComponent },
+  { path: 'postgres/all-topics', component: DbTopicsComponent },
+  { path: 'postgres/server-db-connection', component: ServerDbConnectionComponent },
   { path: 'notebooks', component: NotebooksComponent },
   { path: 'linux-commands', component: LinuxCommandComponent},
   { path: 'linux-commands/basic-linux-commands', component: BasicLinuxCommandsComponent},
@@ -43,6 +51,7 @@ export const RoutingComponents = [
   JavaCoreComponent, PostgresComponent, SpringBootComponent,
   LinuxCommandComponent, BasicLinuxCommandsComponent,
   AngularDeploymentOnTomcatComponent, AngularDeploymentOnNginxComponent,
-  SpringBootDeploymentOnTomcatComponent, NotebooksComponent, ArrayComponent
+  SpringBootDeploymentOnTomcatComponent, NotebooksComponent, ArrayComponent,
+  BasicQueryComponent, DbQuestionsComponent, DbTopicsComponent, ServerDbConnectionComponent
 
 ];
