@@ -14,7 +14,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="value" id="cmd-value">{{c.desc}}</div>
+                                <div class="value" *ngFor="let desc of c.desc" id="cmd-value">{{desc}}</div>
                             </div>
                             <div id="terminal-icon" *ngIf="c.code" class="col-md-1">
                                 <div class="value"><i class='bx bx-message-detail'></i></div>

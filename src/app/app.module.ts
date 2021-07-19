@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { NgxTypedJsComponent, NgxTypedJsModule } from 'ngx-typed-js';
+import { ThemeService } from './theme.service';
+import { NgxTypedJsModule } from 'ngx-typed-js';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,10 @@ import { NgxTypedJsComponent, NgxTypedJsModule } from 'ngx-typed-js';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    ColorPickerModule
   ],
-  providers: [],
+  providers: [ ThemeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

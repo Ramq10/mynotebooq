@@ -6,6 +6,6 @@
 }
 .value {
     font-size: larger;
-    color: #0563bb;
+    color: var(--primaryColor) !important;
     font-family: cursive;
 }

@@ -1,30 +1,3 @@
-<!-- <div class="container">
-  <nav class="navbar fixed-top navbar-expand-sm navbar-light">
-    <div class="container-fluid">
-      <img src="../../assets/mynotebooqlogo.png" width="40px" alt="">&nbsp;
-      <a class="navbar-brand" href="#">MYNOTEBOOQ</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/home">MyNotes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div> -->
 <html>
 <body>
 
@@ -36,16 +9,44 @@
 
     <nav class="nav-menu">
       <ul>
-        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a routerLink="/linux-commands"><i class="bx bx-file-blank"></i> <span>Linux-commands</span></a></li>
-        <li><a routerLink="/postgres"><i class="bx bx-book-content"></i> <span>Postgres</span></a></li>
-        <li><a routerLink="/notebooks"><i class="bx bx-server"></i> <span>NoteBooks</span></a></li>
-        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li class="active"><a href="#hero"><i class="bx primary-color bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="bx primary-color bx-user"></i> <span>About</span></a></li>
+        <li><a routerLink="/linux-commands"><i class="bx primary-color bx-file-blank"></i> <span>Linux-commands</span></a></li>
+        <li><a routerLink="/postgres"><i class="bx primary-color bx-book-content"></i> <span>Postgres</span></a></li>
+        <li><a routerLink="/notebooks"><i class="bx primary-color bx-server"></i> <span>NoteBooks</span></a></li>
+        <li><a href="#contact"><i class="bx primary-color bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a data-toggle="modal" data-target="#exampleModalCenter"><i class="fa primary-color fa-adjust" aria-hidden="true"></i> <span>Theme Manage</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
 
 </body>
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Theme Manager</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <span>Primary Color:</span>
+            <input style="border-radius: 15px; width: 5rem; cursor: pointer;" [(colorPicker)]="color" [value]="color" [style.background]="color"/>
+          </div>
+          <div style="margin-top: 15px;">
+            <span>Background Color:</span>
+            <input style="border-radius: 15px; width: 5rem; cursor: pointer;" [(colorPicker)]="bgColor" [value]="bgColor" [style.background]="bgColor"/>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="saveChanges()" data-dismiss="modal" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </html>
