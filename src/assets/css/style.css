@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #0563bb;
+  color:var(--primaryColor);
 }
 
 a:hover {
-  color: #067ded;
+  color: var(--primaryColor);
   text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   right: 15px;
   bottom: 15px;
-  background: #0563bb;
+  background: var(--primaryColor);
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top:hover {
   color: #fff;
-  background: #0678e3;
+  background: var(--primaryColor);
   transition: background 0.2s ease-in-out;
 }
 
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
+  border: 6px solid var(--primaryColor);
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #fff;
-  background: #0563bb;
+  background: var(--primaryColor);
 }
 
 .nav-menu a:hover span, .nav-menu .active > a span, .nav-menu li:hover > a span {
@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero p span {
-  color: #0563bb;
+  color: var(--primaryColor);
   letter-spacing: 1px;
 }
 
@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .social-links a:hover {
-  color: #0563bb;
+  color: var(--primaryColor);
 }
 
 @media (max-width: 992px) {
