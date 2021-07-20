@@ -7,3 +7,62 @@
         margin-top: 15px;
     }
   }
+.instructions {
+    position: absolute;
+    display: block;
+    width: 50%;
+    left: 6%;
+}
+
+.home {
+    top: 18%;
+}
+.about {
+    top: 28%;
+}
+.linux {
+    top: 38%;
+}
+.postgres {
+    top: 49%;
+}
+.notebook {
+    top: 59%;
+}
+.contact {
+    top: 69%;
+}
+.theme {
+    top: 70%;
+}
+.blurBg{
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.containers {
+    display: -webkit-box;
+    position: absolute;
+}
+.card {
+    padding: 3%;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+}
+.btn-danger {
+    width: fit-content;
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    color: var(--primaryColor);
+  }
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }

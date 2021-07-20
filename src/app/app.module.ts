@@ -7,12 +7,14 @@ import { HeaderComponent } from './header/header.component';
 import { ThemeService } from './theme.service';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { InstructionScreenComponent } from './instruction-screen/instruction-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
-    HeaderComponent
+    HeaderComponent,
+    InstructionScreenComponent
   ],
   imports: [
     BrowserModule,

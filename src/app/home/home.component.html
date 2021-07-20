@@ -1,9 +1,9 @@
 <html>
   <body>
-    <section id="hero" class="d-flex flex-column justify-content-center">
+    <section id="hero" [ngClass]="{'blurBg': showInstructions}" class="d-flex flex-column justify-content-center">
       <div class="container cont" data-aos="zoom-in" data-aos-delay="100">
         <h1>MYNOTEBOOQ</h1>
-        <ngx-typed-js
+        <ngx-typed-js *ngIf='!showInstructions'
           [strings]="['JAVA', 'ANGULAR', 'POSTGRES', 'LINUX_COMMAND']"
           backDelay="500"
           smartBackspace="true"
@@ -12,16 +12,32 @@
         >
           <h1 class="typing primary-color"></h1>
         </ngx-typed-js>
-        <div class="social-links">
+        <div class="social-links" *ngIf='!showInstructions'>
           <a href="#" class="twitter"><i class="bx primary-color bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx primary-color bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx primary-color bxl-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bx primary-color bxl-skype"></i></a>
           <a href="#" class="linkedin"><i class="bx primary-color bxl-linkedin"></i></a>
+          <a href="#" (click)="onSkip()" class="linkedin">Show Instructions</a>
+          
         </div>
       </div>
+      
     </section>
     <!-- End Hero -->
     <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   </body>
+  <div class="instructions" [ngClass]="instructionData[index].class" *ngIf='showInstructions'>
+    <div class="container containers">
+      <i class="arrow left"></i>
+      <div class="card">
+        {{instructionData[index].data}}
+      <hr>
+      <div class="buttons">
+        <div class="btn btn-danger" (click)="onSkip()">Skip</div>
+        <div class="btn btn-danger" style="float: right;" (click)="onNext()">Next</div>
+      </div>
+      </div>
+    </div>
+  </div>
 </html>
